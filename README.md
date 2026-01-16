@@ -1,2 +1,2 @@
 # EaglerCraft
-https://github.com/isaacrlambert01/gnlinks.git
+https://isaacrlambert01.github.io/gnlinks/
