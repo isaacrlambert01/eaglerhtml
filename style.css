@@ -104,23 +104,12 @@ header {
 }
 
 .big-logo {
-  font-size: clamp(4rem, 8vw, 7rem);
+  font-size: clamp(6rem, 10vw, 9rem);
   font-weight: 900;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-align: center;
   text-shadow: 0 0 25px rgba(255, 165, 0, 0.4);
-}
-
-.big-logo::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  margin: 20px auto 0;
-  background: white;
-  border-radius: 2px;
-  opacity: 0.8;
 }
 
 .logo {
