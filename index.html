@@ -48,10 +48,19 @@
         document.getElementById('popupTitle').textContent = "Suggestions?";
         const popupBody = document.getElementById('popupBody');
         popupBody.innerHTML =` 
-            <button class="settings-button" onclick="darkMode()">Toggle Dark Mode</button>
-            <br><br>
-            <button class="settings-button" onclick="tabCloak()">Tab Cloak</button>
-            <br>
+            <h4>Have a suggestion?</h4>
+                <form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse"
+                      method="POST"
+                      target="_blank">
+                    <textarea name="entry.123456789"
+                              placeholder="Type your suggestion here..."
+                              required
+                              style="width:100%;height:100px;"></textarea>
+                    <br><br>
+                    <button class="settings-button" type="submit">
+                        Submit
+                    </button>
+                </form>
             `;
             popupBody.contentEditable = false;
             document.getElementById('popupOverlay').style.display = "flex";
