@@ -6,14 +6,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/https://www.eskymofanclub.org/wp-content/uploads/Escanaba-512.png">
     <link rel="apple-touch-icon" href="/https://www.eskymofanclub.org/wp-content/uploads/Escanaba-512.png">
     <script>
-     allowLeave = false;
-     document.getElementById('home').addEventListener('click', () => {
-        allowLeave = true;
-     });
      window.addEventListener('beforeunload', function (event) {
-             if (allowLeave == true) {
-        return; // absolutely no returnValue
-            } else {
          event.preventDefault();
          event.returnValue = '';
              }});
