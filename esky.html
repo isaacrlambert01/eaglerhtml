@@ -6,11 +6,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/https://www.eskymofanclub.org/wp-content/uploads/Escanaba-512.png">
     <link rel="apple-touch-icon" href="/https://www.eskymofanclub.org/wp-content/uploads/Escanaba-512.png">
     <script>
-        window.addEventListener('beforeunload', function (event) {
-            event.preventDefault();
-            event.returnValue = '';
-            return 'Wait! Dont leave the Mos? Your changes might not be saved.';
-        });
+     let allowLeave = false;
+     if (allowLeave) return; // skip warning
+        event.preventDefault();
+        event.returnValue = '';
+      });
+     document.getElementById('home').addEventListener('click', () => {
+        allowLeave = true;
+     });
     </script>
     <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5521219086088837" crossorigin="anonymous"></script>
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WX5VS54ZDW"></script>
@@ -776,7 +779,7 @@ footer {
             <a href="#" onclick="document.getElementById('importData').click(); return false;">Import Data</a>
             <input type="file" id="importData" style="display: none;" onchange="loadData(event)">
             <a href="#" onclick="showMinecraft(); return false;">Minecraft</a>
-            <a href="https://tmorris01.github.io/gnlinks/" style="justify-content: right; text-align: right; text-decoration: underline">LINKS HOME PAGE</a>
+            <a href="https://tmorris01.github.io/gnlinks/" id="home"; style="justify-content: right; text-align: right; text-decoration: underline">LINKS HOME PAGE</a>
         </div>
     </footer>
     <script>const container = document.getElementById('container');
