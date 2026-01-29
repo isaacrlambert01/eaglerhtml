@@ -38,6 +38,10 @@
         <a href="monkeymart.html">
             <button class="settings-button" style="width: 40%;">Monkey Mart</button>
         </a>
+        <br><br>
+        <a>
+            <button id="retro" class="settings-button" style="width: 40%;">Retro Bowl</button>
+        </a>
         <!-- Future buttons go here -->
     </center>
 <a href="1.12.html">
@@ -67,6 +71,23 @@
                 style="width:100%; height:290px; border:none; display:block;"
                 loading="lazy">
                 </iframe>
+            `;
+            popupBody.contentEditable = false;
+            document.getElementById('popupOverlay').style.display = "flex";
+});
+
+    const retro = document.getElementById('suggestions');
+    retro.addEventListener('click', () => {
+        document.getElementById('popupTitle').textContent = "Retro Bowl";
+        const popupBody = document.getElementById('popupBody');
+        popupBody.innerHTML =` 
+            <h4 style="text-align: center">
+        <a href="rb.html">
+            <button class="settings-button" style="width: 40%; margin-right: 5%;">Retro Bowl</button>
+        </a>
+        <a href="college.html">
+            <button class="settings-button" style="width: 40%;">RB College</button>
+        </a></h4>
             `;
             popupBody.contentEditable = false;
             document.getElementById('popupOverlay').style.display = "flex";
