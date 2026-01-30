@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <head id="ctl00_Head1"><title>Home - Escanaba Area Public Schools</title>
+    <title>Combined Site - 2026</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Floating Button Style */
@@ -25,14 +25,23 @@
         #site2 { display: none; }
     </style>
 </head>
-      <body class="dark-mode">
+<body class="dark-mode">
 
     <!-- FLOATING TOGGLE BUTTON -->
     <button class="main-toggle-btn" onclick="toggleSites()">Switch Website</button>
 
     <!-- WEBSITE 1 -->
     <div id="site1">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Escanaba Area Public Schools</title>
+    <link rel="icon" type="image/png" href="https://www.eskymofanclub.org/wp-content/uploads/Escanaba-512.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
     <header>
         <div class="header-content">
             <div class="logo" style="font-size: 6rem">Links</div>
@@ -72,7 +81,7 @@
         </a>
         <!-- Future buttons go here -->
     </center>
-      <a href="https://noodlelover1.github.io/coreus/" target="_blank">
+<a href="https://noodlelover1.github.io/coreus/" target="_blank">
     <button class="invisible-button" style="cursor: default"></button>
 </a>
 <a href="eskymos.html">
@@ -89,15 +98,72 @@
             </div>
         </div>
     </div>
+    
+<script>
+    const settings = document.getElementById('suggestions');
+    settings.addEventListener('click', () => {
+        document.getElementById('popupTitle').textContent = "Suggestions?";
+        const popupBody = document.getElementById('popupBody');
+        popupBody.innerHTML =` 
+            <h4 style="text-align: center">Any Game you want to see added or <br> any Improvement you might want?</h4>
+                <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLScB9014ixTNlEUrC2k3GN8nFrSPkS5GlfLRaWIOGMVW2rslmQ/viewform"
+                style="width:100%; height:290px; border:none; display:block;"
+                loading="lazy">
+                </iframe>
+            `;
+            popupBody.contentEditable = false;
+            document.getElementById('popupOverlay').style.display = "flex";
+});
+
+    const retro = document.getElementById('retro');
+    retro.addEventListener('click', () => {
+        document.getElementById('popupTitle').textContent = "Retro Bowl";
+        const popupBody = document.getElementById('popupBody');
+        popupBody.innerHTML =` 
+            <h4 style="text-align: center">
+        <a href="rb.html">
+            <button class="settings-button" style="width: 40%; margin-right: 5%;">Retro Bowl</button>
+        </a>
+        <a href="college.html">
+            <button class="settings-button" style="width: 40%;">RB College</button>
+        </a></h4>
+            `;
+            popupBody.contentEditable = false;
+            document.getElementById('popupOverlay').style.display = "flex";
+});
+
+    const mine = document.getElementById('minecraft');
+    mine.addEventListener('click', () => {
+        document.getElementById('popupTitle').textContent = "Minecraft (Use JavaScript Version)";
+        const popupBody = document.getElementById('popupBody');
+        popupBody.innerHTML =` 
+            <h4 style="text-align: center">
+        <a href="1.12.html">
+            <button class="settings-button" style="width: 40%; margin-right: 5%;">Minecraft 1.12</button>
+        </a>
+        <a href="1.8.html">
+            <button class="settings-button" style="width: 40%;">Minecraft 1.8</button>
+        </a></h4>
+            `;
+            popupBody.contentEditable = false;
+            document.getElementById('popupOverlay').style.display = "flex";
+});
+        function closePopup() {
+        document.getElementById('popupOverlay').style.display = "none";
+    }
+</script>
+    
+</body>
+</html>
     </div>
 
-
-
-
-
-
+    <!-- WEBSITE 2 -->
     <div id="site2">
-
+<!DOCTYPE html PUBLIC  "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html id="ctl00_html" xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head id="ctl00_Head1"><title>
+	Home - Escanaba Area Public Schools
+</title>
 	<style>
 		.cssIESearch {
 			border:dashed !important;
@@ -938,19 +1004,7 @@ Sys.Application.add_init(function() {
     </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9c61a48c88406181","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"db425491991d400fa7b5aef612539c3e"}' crossorigin="anonymous"></script>
 </body>
-
-        
-    </div>
-
-    <!-- POPUP OVERLAY (Shared) -->
-    <div id="popupOverlay">
-        <div class="popup">
-            <div class="popup-header">
-                <h3 id="popupTitle">Title</h3>
-                <button onclick="closePopup()">×</button>
-            </div>
-            <div id="popupBody"></div>
-        </div>
+</html>
     </div>
 
     <script>
@@ -966,12 +1020,6 @@ Sys.Application.add_init(function() {
                 s2.style.display = "block";
             }
         }
-
-        function closePopup() {
-            document.getElementById('popupOverlay').style.display = "none";
-        }
-
-        // Include your existing Site 1 event listeners (suggestions, retro, etc.) below
     </script>
 </body>
 </html>
